@@ -1,42 +1,63 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
-public class exo1 {
+public class exoFrancois {
     public static void main(String[] args) {
+        //exo1();
+        //exo2();
+        //exo3();
+        //exo4();
+        //exo5();
+        //exo6();
+        //exo7();
+    }
+    public static double demandeDouble() {
         Scanner read = new Scanner(System.in);
-        /*exo1 System.out.println("input votre nom");
-        String nom=read.nextLine();
-        System.out.println("Bienvenue "+ nom);
-        */
-         /*exo 2
+        return read.nextDouble();
+        }
+        public static int demandeInt(){
+    Scanner read = new Scanner(System.in);
+    return read.nextInt();
+        }
+        public static String demandeString(){
+        Scanner read= new Scanner(System.in);
+        return read.nextLine();
+        }
+    public static String demandeNext(){
+        Scanner read= new Scanner(System.in);
+        return read.next();
+    }
+
+        public static void exo1(){
+            System.out.println("entrer votre nom");
+            String nom=demandeString();
+            System.out.println("Bienvenu" + nom );
+    }
+    public static void exo2(){
         System.out.println("entrer le premier numero");
-        int numero1=read.nextInt();
+        int numero1=demandeInt();
         System.out.println("entrer le deuxieme numero");
-        int numero2=read.nextInt();
+        int numero2=demandeInt();
 
         System.out.println("total deux numeros: "+ (numero1 + numero2));
 
-    */
-        /*
-        exo3
+    }
+    public static void exo3(){
         System.out.println("entrer le prix facbrication: " );
-        float prixF=read.nextFloat();
+        double prixF=demandeDouble();
         System.out.println("entrer le prix de vente :" );
-        float prixV=read.nextFloat();
+        double prixV=demandeDouble();
         if(prixV>prixF){
             System.out.println("profit "+(prixV-prixF));
         }else{
             System.out.println("perte" + (prixF-prixV));
         }
-
-         */
-        /*
-        Exo4
+    }
+    public static void exo4(){
         System.out.println("entrer numero1: ");
-        int num1= read.nextInt();
+        int num1= demandeInt();
         System.out.println("entrer numero2: ");
-        int num2= read.nextInt();
+        int num2= demandeInt();
         System.out.println("entrer numero3: ");
-        int num3=read.nextInt();
+        int num3=demandeInt();
         int max=0;
         if(num1>max){
             max=num1;
@@ -48,15 +69,12 @@ public class exo1 {
             max=num3;
         }
         System.out.println("max :" + max);
-
-         */
-/*
-exo6
-
+    }
+    public static void exo5(){
         int note=345678;
         while(note>0){
             System.out.println("entrer votre note ou tape -1 sortir de la boucle");
-            note=read.nextInt();
+            note=demandeInt();
             switch (note){
                 case 0,1,2,3,4:
                     System.out.println("Catastrope");
@@ -80,17 +98,15 @@ exo6
                     System.out.println("invalide");
             }
 
-}
-*/
-
-        /*
-        exo6
+        }
+    }
+    public static void exo6(){
         System.out.println("entrer le premier operande");
-        float operande1= read.nextFloat();
+        double operande1= demandeDouble();
         System.out.println("entrer l'operateur (+,-,*,/)");
-        char operator= read.next().charAt(0);
+        char operator= demandeNext().charAt(0);
         System.out.println("entrer le deuxieme operande");
-        float operande2=read.nextFloat();
+        double operande2=demandeDouble();
         switch (operator){
             case'+':
                 System.out.println(operande1 +"+"+operande2+"="+(operande1+operande2));
@@ -106,50 +122,54 @@ exo6
                 break;
             default:
                 System.out.println("operation NO valide");
-                }
-                */
-        /*
+        }
+    }
+    public static void exo7(){
         System.out.println("entrer votre numero");
-        int numero = read.nextInt();
+        int numero = demandeInt();
         int somme=0;
         for(int i=1; i<=numero;i++){
             somme=somme+i;
             if(i==1){
                 System.out.print(i);
             }else{
-            System.out.print("+" +i);
-        }
+                System.out.print("+" +i);
+            }
 
         }
         System.out.print("="+somme);
-
-    */
-        /*
+    }
+    public static void exo8(){
         System.out.println("entrer votre numero");
-        int numero = read.nextInt();
+        int numero = demandeInt();
         String charac="";
         for(int i=1; i<=numero;i++){
             charac+="*";
             System.out.println(charac);
         }
-
-         */
-/*
+    }
+    public static void exo9(){
         System.out.println("entrer votre numero");
-        int numero = read.nextInt();
+        int numero = demandeInt();
         String charac="";
         for(int i=1; i<numero;++i){
             charac+="*";
             System.out.println(charac);
         }
         for(int i=numero; i>=1;--i) {
-           for(int j=1;j<=i;j++){
-               System.out.print("*");
-           }
-            System.out.println();
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
             }
-*/
+            System.out.println();
+        }
+    }
+
+    public static void exo11(){
+        System.out.println("entrer un montant");
+        double montant=demandeDouble();
+    }
+
 
 
     }
-}
+
